@@ -1,0 +1,135 @@
+/*
+                    VUE.JS安装
+    安装方式：NPM安装
+    编译器：VScode、WebStorm
+
+    //Vue的MVVM开发模式：view(Dom)----ViewModel(Data binding&DOM Listeners)----Model(DBA)
+通过new Vue()对象来解析model返回的数据，然后传到view层
+    传入的options
+el
+    类型：string|HTMLelement
+    VUE实例管理哪一个DOM
+data
+    类型：object|Function(组件中data必须是一个函数)
+    VUE实例对接的数据
+methods
+    类型：{[key:string]:Function}
+    定义VUE的一些方法
+
+    //VUE的生命周期
+ocnst app = new Vue(
+    el:'#app',
+    data:obj,
+    function:{func:function(){                  //生命周期中的回调函数
+
+    }}
+
+    created:function(){
+
+    },
+);
+
+    //插值操作：Musttache语法
+    1.{{}}
+    2.指令的使用
+    v-once
+    v-text
+    v-html
+    v-pre
+    v-cloak //斗篷指令
+
+    //v-bind介绍
+    作用：动态绑定属性
+    绑定class有两种方式：
+      对象语法{key:value}
+      数组语法[value1,value2]
+    
+    //计算属性的基本使用
+        1.computed:{
+            setter:function(){
+
+            },  //不常用
+            getter:function(){
+
+            },  //常用
+        }
+        2.计算属性调用时，只占用一次内存；但方法调用时，会调用多次内存
+
+    //ES6语法
+        ES5只有function里才有作用域
+
+        let/var
+            var定义的变量没有块级作用域的限制；
+                if/for没有作用域，function()是有作用域的。所以使用闭包function的作用域来解决这个问题（因为闭包函数是一个作用域）
+            let定义的变量包含if/for的块级作用域
+        const 
+            使用const修饰的标识符为常量，不可以再次赋值
+            建议：在ES6开发中，优先使用const,只有需要改变某一个标识符时才使用let
+            const在定义变量时候，必须要赋值
+
+    //对象字面量的增强写法
+            const obj = {};//对象字面量写法
+        //对象的自变量增强写法
+            const id = '1';
+            const name = 'Mata';
+            //ES5写法
+            const objES5 = {
+                id:id,
+                name:name
+            }
+
+            //ES6写法
+            const objES6 = {
+                id,
+                name,
+            }
+
+        //方法的增强写法
+            //ES5写法
+            const objFunc1 = {
+              RunFunc:function(){},
+              GetAlllName:function(){}
+            }
+
+            //ES6写法
+            const objFunc2 = {
+              RunFunc(){},
+              GetAllName(){}
+            }
+
+        //事件监听 v-on基础
+            v-on:click = ""
+            语法糖  @click = ""
+            @keyup.enter="" //监听按键的enter事件，添加事件方法
+
+        // 1.v-if v-else的配合使用
+           2.v-if v-else-if v-else的配合使用
+        
+            v-if和v-show的区别
+            v-if：当条件为false,dom中直接删除标签
+            v-show：当条件为false，dom中标签加CSS属性display:none
+
+        //v-for遍历数组对象
+            //数组
+            <pv-for="item in items">{{item}}</p>
+            <p v-for="(item,index) in items">{{item}}+{{index}}</p>
+            //对象
+            <p v-for="item in obj">{{item}}</p>
+            <p v-for="(value,key) in obj">{{key}}+{{value}}</P>
+            <p v-for="(value,key,index) in obj">{{key}}+{{value}}+{{index}}</P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
